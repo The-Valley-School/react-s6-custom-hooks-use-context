@@ -1,4 +1,6 @@
 import './App.css';
+import PokemonInfo from './components/PokemonInfo';
+import StarwarsInfo from './components/StarWarsInfo';
 import useCounter from './hooks/useCounter';
 
 function App() {
@@ -18,7 +20,12 @@ function App() {
 
       <p>Valor actual: { secondCounter }</p>
       <button onClick={secongHandleDecrement}>Decrementar</button>
-      <button onClick={secondHandleIncrement}>Aumentar</button>
+      <button onClick={secondHandleIncrement}>Aumentar</button>+
+
+      <h2>Peticiones a la API</h2>
+    
+      <PokemonInfo></PokemonInfo>
+      <StarwarsInfo></StarwarsInfo>
     </div>
   );
 }
