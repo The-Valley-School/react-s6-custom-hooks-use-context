@@ -1,5 +1,6 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
+import { ThemeContext } from "../App";
 
 const StarwarsInfo = () => {
 
@@ -7,8 +8,10 @@ const StarwarsInfo = () => {
 
   const [info] = useFetch(API_URL);
 
+  const theme = React.useContext(ThemeContext);
+
   return (
-    <div>
+    <div style={{ background: theme.background, color: theme.fontColor }}>
       <p>Información de Luke Skywalker:</p>
 
       {info ?
