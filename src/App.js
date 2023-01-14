@@ -4,6 +4,9 @@ import useCounter from './hooks/useCounter';
 import React from 'react';
 import Login from './components/Login/Login';
 
+// Antiguo import previo a usar lazy
+// import LongText from './components/LongText/LongText';
+
 // Contextos
 export const ThemeContext = React.createContext();
 export const LoginContext = React.createContext();
@@ -20,6 +23,9 @@ const themes = {
     fontColor: "#FFF",
   }
 }
+
+// Componentes dinámicos
+const LongTextLazy = React.lazy(() => import('./components/LongText/LongText'));
 
 function App() {
 
@@ -42,6 +48,12 @@ function App() {
   return (
     <LoginContext.Provider value={loginProviderValue}>
       <div className="App">
+
+        <h2>Componente lazy:</h2>
+        <React.Suspense fallback={<div>Cargando...</div>}>
+          <LongTextLazy></LongTextLazy>
+        </React.Suspense>
+
         <h2>Login:</h2>
 
         <Login></Login>
