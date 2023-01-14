@@ -2,9 +2,11 @@ import './App.css';
 import ApisInfoGroup from './components/ApisInfoGroup';
 import useCounter from './hooks/useCounter';
 import React from 'react';
+import Login from './components/Login/Login';
 
 // Contextos
 export const ThemeContext = React.createContext();
+export const LoginContext = React.createContext();
 
 const themes = {
   light: {
@@ -26,34 +28,49 @@ function App() {
 
   // Estados
   const [themeState, setThemeState] = React.useState(themes.dark);
+  const [userState, setUserState] = React.useState();
+
+  const updateUserInfo = (username) => {
+    setUserState(username);
+  }
+
+  const loginProviderValue = {
+    currentUsername: userState,
+    updateUserInfo: updateUserInfo,
+  }
 
   return (
-    <div className="App">
-      <h2>Temas (contextos)</h2>
-      <p>Tema actual: {themeState.name}</p>
-      <button onClick={() => setThemeState(themeState === themes.light ? themes.dark : themes.light)}>Cambiar tema</button>
+    <LoginContext.Provider value={loginProviderValue}>
+      <div className="App">
+        <h2>Login:</h2>
+
+        <Login></Login>
+
+        <h2>Temas (contextos)</h2>
+        <p>Tema actual: {themeState.name}</p>
+        <button onClick={() => setThemeState(themeState === themes.light ? themes.dark : themes.light)}>Cambiar tema</button>
 
 
-      <h2>Contador 1:</h2>
+        <h2>Contador 1:</h2>
 
-      <p>Valor actual: {counter}</p>
-      <button onClick={handleDecrement}>Decrementar</button>
-      <button onClick={handleIncrement}>Aumentar</button>
+        <p>Valor actual: {counter}</p>
+        <button onClick={handleDecrement}>Decrementar</button>
+        <button onClick={handleIncrement}>Aumentar</button>
 
-      <h2>Contador 2:</h2>
+        <h2>Contador 2:</h2>
 
-      <p>Valor actual: {secondCounter}</p>
-      <button onClick={secongHandleDecrement}>Decrementar</button>
-      <button onClick={secondHandleIncrement}>Aumentar</button>
+        <p>Valor actual: {secondCounter}</p>
+        <button onClick={secongHandleDecrement}>Decrementar</button>
+        <button onClick={secondHandleIncrement}>Aumentar</button>
 
-      <h2>Peticiones a la API</h2>
+        <h2>Peticiones a la API</h2>
 
-      <ThemeContext.Provider value={themeState}>
-        <ApisInfoGroup></ApisInfoGroup>
-      </ThemeContext.Provider>
+        <ThemeContext.Provider value={themeState}>
+          <ApisInfoGroup></ApisInfoGroup>
+        </ThemeContext.Provider>
 
-
-    </div>
+      </div>
+    </LoginContext.Provider>
   );
 }
 

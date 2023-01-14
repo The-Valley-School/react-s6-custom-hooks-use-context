@@ -1,8 +1,11 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import { ThemeContext } from "../App";
+import { LoginContext } from "../App";
 
 const StarwarsInfo = () => {
+
+  const login = React.useContext(LoginContext);
 
   const API_URL = "https://swapi.dev/api/people/1";
 
@@ -24,6 +27,8 @@ const StarwarsInfo = () => {
         </div>
         : <p>Cargando...</p>
       }
+
+      <h3>Usuario: {login.currentUsername}</h3>
 
     </div>
   );
