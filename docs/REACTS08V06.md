@@ -2,7 +2,7 @@
 
 En este vídeo haremos un desarrollo que nos permitirá cargar unos componentes solo cuando sean visibles en pantalla, haciendo uso de la API del navegador IntersectionObserver:
 
-[https://developer.mozilla.org/es/docs/Web/API/Intersection_Observer_API](https://developer.mozilla.org/es/docs/Web/API/Intersection_Observer_API) 
+<https://developer.mozilla.org/es/docs/Web/API/Intersection_Observer_API>
 
 El IntersectionObserver es una API de JavaScript que permite detectar cuando un elemento en una página web se cruza con el área visible del viewport (la ventana del navegador que se ve actualmente en pantalla).
 
@@ -58,3 +58,7 @@ const ApisInfoGroup = () => {
 
 export default ApisInfoGroup;
 ```
+
+Recuerda que el código que hemos visto durante los vídeos puedes encontrarlo en el siguiente repositorio:
+
+<https://github.com/The-Valley-School/react-s8-custom-hooks-use-context>

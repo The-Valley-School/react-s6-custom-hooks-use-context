@@ -2,7 +2,7 @@
 
 En este vídeo aprenderemos a usar React.Lazy y React.Suspense:
 
-[https://reactjs.org/docs/code-splitting.html](https://reactjs.org/docs/code-splitting.html) 
+<https://reactjs.org/docs/code-splitting.html>
 
 React.lazy y React.suspense son características de React que se utilizan para cargar componentes de forma dinámica en lugar de cargarlos todos al principio.
 

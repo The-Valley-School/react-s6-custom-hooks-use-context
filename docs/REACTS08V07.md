@@ -44,3 +44,7 @@ Más o menos Algo así:
 ```
 
 De esta manera todos los componentes que estén dentro del LoginContext.Provider podrán consumir el LoginContext.
+
+Recuerda que el código que hemos visto durante los vídeos puedes encontrarlo en el siguiente repositorio:
+
+<https://github.com/The-Valley-School/react-s8-custom-hooks-use-context>

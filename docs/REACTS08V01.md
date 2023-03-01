@@ -2,7 +2,7 @@
 
 En esta sesión vamos a hablar de los Custom Hooks:
 
-[https://es.reactjs.org/docs/hooks-reference.html#usememo](https://es.reactjs.org/docs/hooks-custom.html) 
+<https://es.reactjs.org/docs/hooks-custom.html>
 
 Los custom hooks en React son funciones de JavaScript que permiten reutilizar el código de estado y efectos en componentes de React. Los hooks deben comenzar con "use" y pueden ser creados por el desarrollador para encapsular lógica específica que se utiliza en varios componentes. Los componentes pueden llamar a estos hooks para acceder a la lógica encapsulada y actualizar su estado y efectos de manera apropiada. 
 

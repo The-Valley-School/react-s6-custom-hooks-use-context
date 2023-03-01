@@ -2,7 +2,7 @@
 
 En este vídeo veremos UseContext:
 
-[https://es.reactjs.org/docs/hooks-reference.html#usecontext](https://es.reactjs.org/docs/hooks-reference.html#usecontext) 
+<https://es.reactjs.org/docs/hooks-reference.html#usecontext>
 
 **useContext** es un hook de React que permite acceder al valor de un contexto en un componente de React. Un contexto es una forma de proporcionar datos globales a través de la jerarquía de componentes de una aplicación sin tener que pasar props manualmente a través de varios niveles de componentes. 
 
